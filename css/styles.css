@@ -348,6 +348,18 @@ img {
   padding-bottom: 16px;
 }
 
+/* постійні клієнти */
+.customers-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  /* padding-bottom: 30px; */
+}
+
+.customers-item {
+}
+
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
