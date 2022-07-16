@@ -7,6 +7,7 @@
   --background2: #f5f4fa;
   --border-header-color: #ececec;
   --border-content-color: #eeeeee;
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -118,9 +119,22 @@ img {
   color: var(--footer-txt-col);
 }
 
+/* іконки контактів */
+.icon-mail,
+.icon-phone {
+  margin-right: 10px;
+  fill: var(--secondary-txt-col);
+}
 .contact-link {
   padding-top: 32px;
   padding-bottom: 31px;
+}
+
+.icon-mail:hover,
+.icon-mail:focus,
+.icon-phone:hover,
+.icon-phone:focus {
+  fill: var(--brand-txt-col);
 }
 
 .contact-link,
@@ -128,10 +142,12 @@ img {
   font-weight: 500;
   font-size: 14px;
   font-style: normal;
+  align-items: center;
   line-height: calc(16 / 14);
   color: var(--secondary-txt-col);
   letter-spacing: 0.02em;
-  display: block;
+  /* розповсюджується на нащадків тільки тому і задали флекс теж */
+  display: flex;
 }
 
 .header-link {
@@ -158,10 +174,22 @@ img {
 }
 
 .section-hero {
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/hero-bg.jpg);
   height: 600px;
   background-color: #2f303a;
   padding-top: 200px;
   padding-bottom: 200px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section {
@@ -199,6 +227,7 @@ img {
   max-width: 250px;
   padding: 9px 33px 9px 29px;
   margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-btn:hover,
@@ -208,8 +237,14 @@ img {
 .skils-list {
   display: flex;
   gap: 30px;
-  align-items: center;
+  align-items: flex-start;
   /* flex-basis: 270px; */
+}
+
+.skils-icon-div {
+  padding: 25px 100px;
+  background: var(--background2);
+  margin-bottom: 30px;
 }
 
 .skils-item {
@@ -259,14 +294,42 @@ img {
   gap: 30px;
 }
 
+/* іконки соц.иереж */
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--footer-txt-col);
+  border-radius: 50%;
+}
+.socials-icon {
+  fill: var(--icon-color);
+}
+
+.socials-link:hover {
+  background-color: var(--brand-txt-col);
+}
+.socials-link:hover .socials-icon {
+  fill: var(--footer-txt-col);
+}
+
 .teams-item {
   background-color: var(--footer-txt-col);
 }
 
 .team-images-div {
-  padding: 30px 0;
-  /* padding-top: 30px;
-  padding-bottom: 30px; */
+  padding: 30px 0px;
 }
 
 .teams-subtitle {
@@ -282,12 +345,16 @@ img {
   line-height: calc(19 / 16);
   text-align: center;
   color: var(--secondary-txt-col);
+  padding-bottom: 16px;
 }
 
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-logo {
