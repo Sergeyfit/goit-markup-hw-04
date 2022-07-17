@@ -133,7 +133,9 @@ img {
 .icon-mail:hover,
 .icon-mail:focus,
 .icon-phone:hover,
-.icon-phone:focus {
+.icon-phone:focus,
+.customers-icon:hover,
+.customers-icon:focus {
   fill: var(--brand-txt-col);
 }
 
@@ -313,7 +315,8 @@ img {
   background-color: var(--footer-txt-col);
   border-radius: 50%;
 }
-.socials-icon {
+.socials-icon,
+.customers-icon {
   fill: var(--icon-color);
 }
 
@@ -326,6 +329,9 @@ img {
 
 .teams-item {
   background-color: var(--footer-txt-col);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-images-div {
@@ -358,6 +364,17 @@ img {
 }
 
 .customers-item {
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+
+.customers-item:focus,
+.customers-item:hover {
+  border: 1px solid var(--brand-txt-col);
+}
+
+.customers-icon {
+  margin: 16px 32px;
 }
 
 .footer {
@@ -367,6 +384,10 @@ img {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  align-items: baseline;
+  padding-left: 215px;
+  padding-right: 15px;
 }
 
 .footer-logo {
@@ -388,6 +409,34 @@ img {
 
 .address-item:last-child {
   margin-bottom: 0;
+}
+
+.contact-div {
+  padding-right: 70px;
+}
+
+/* footer socails link */
+.footer-socials-header {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--footer-txt-col);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.footer-socials-div .socials-icon {
+  fill: var(--footer-txt-col);
+}
+
+.footer-socials-div .socials-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-socials-div .socials-link:hover {
+  background-color: var(--brand-txt-col);
 }
 
 /* ПОРТФОЛІО */
@@ -432,11 +481,15 @@ img {
 .prt-btn:hover,
 .prt-btn:focus {
   background-color: var(--brand-txt-col);
-  color: var(--white-background-col);
+  color: var(--footer-txt-col);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.prt-box-btn:hover {
+.prt-box-item:hover {
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .prt-box-list {
