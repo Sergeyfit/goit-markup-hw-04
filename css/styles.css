@@ -119,26 +119,6 @@ img {
   color: var(--footer-txt-col);
 }
 
-/* іконки контактів */
-.icon-mail,
-.icon-phone {
-  margin-right: 10px;
-  fill: var(--secondary-txt-col);
-}
-.contact-link {
-  padding-top: 32px;
-  padding-bottom: 31px;
-}
-
-.icon-mail:hover,
-.icon-mail:focus,
-.icon-phone:hover,
-.icon-phone:focus,
-.customers-icon:hover,
-.customers-icon:focus {
-  fill: var(--brand-txt-col);
-}
-
 .contact-link,
 .address-contact {
   font-weight: 500;
@@ -167,8 +147,21 @@ img {
 .address-contact:hover,
 .address-contact:focus,
 .address-contact-map:hover,
-.address-contact-map:focus {
+.address-contact-map:focus,
+.icon-mail:hover,
+.icon-mail:focus {
   color: var(--brand-txt-col);
+}
+
+/* іконки контактів */
+.icon-mail,
+.icon-phone {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.contact-link {
+  padding-top: 32px;
+  padding-bottom: 31px;
 }
 
 .link.current {
@@ -244,9 +237,13 @@ img {
 }
 
 .skils-icon-div {
-  padding: 25px 100px;
-  background: var(--background2);
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin-bottom: 30px;
+  background: var(--background2);
 }
 
 .skils-item {
@@ -302,7 +299,7 @@ img {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 }
 
 .socials-link {
@@ -320,10 +317,12 @@ img {
   fill: var(--icon-color);
 }
 
-.socials-link:hover {
+.socials-link:hover,
+.socials-link:focus {
   background-color: var(--brand-txt-col);
 }
-.socials-link:hover .socials-icon {
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
   fill: var(--footer-txt-col);
 }
 
@@ -351,43 +350,47 @@ img {
   line-height: calc(19 / 16);
   text-align: center;
   color: var(--secondary-txt-col);
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 /* постійні клієнти */
 .customers-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 30px;
-  /* padding-bottom: 30px; */
 }
 
-.customers-item {
+.customers-link {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  width: 170px;
+  height: 90px;
+  display: block;
 }
-
-.customers-item:focus,
-.customers-item:hover {
-  border: 1px solid var(--brand-txt-col);
-}
-
 .customers-icon {
   margin: 16px 32px;
 }
 
+.customers-link:focus .customers-icon,
+.customers-link:hover .customers-icon {
+  fill: var(--brand-txt-col);
+  color: var(--brand-txt-col);
+}
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--brand-txt-col);
+}
+
+/* footer */
+
 .footer {
-  background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: #2f303a;
+}
+
+.footer .conteiner {
   display: flex;
   align-items: baseline;
-  padding-left: 215px;
-  padding-right: 15px;
 }
 
 .footer-logo {
@@ -423,8 +426,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--footer-txt-col);
-  text-align: center;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-socials-div .socials-icon {
