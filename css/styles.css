@@ -373,7 +373,6 @@ img {
 .customers-link:focus .customers-icon,
 .customers-link:hover .customers-icon {
   fill: var(--brand-txt-col);
-  color: var(--brand-txt-col);
 }
 .customers-link:hover,
 .customers-link:focus {
