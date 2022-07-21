@@ -299,7 +299,6 @@ img {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  /* padding-bottom: 30px; */
 }
 
 .socials-link {
@@ -308,11 +307,11 @@ img {
   justify-content: center;
   width: 44px;
   height: 44px;
-
-  background-color: var(--footer-txt-col);
+  fill: var(--footer-txt-col);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
-.socials-icon,
+
 .customers-icon {
   fill: var(--icon-color);
 }
@@ -320,10 +319,6 @@ img {
 .socials-link:hover,
 .socials-link:focus {
   background-color: var(--brand-txt-col);
-}
-.socials-link:hover .socials-icon,
-.socials-link:focus .socials-icon {
-  fill: var(--footer-txt-col);
 }
 
 .teams-item {
@@ -362,12 +357,11 @@ img {
 .customers-link {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  display: flex;
   width: 170px;
-  height: 90px;
-  display: block;
-}
-.customers-icon {
-  margin: 16px 32px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
 }
 
 .customers-link:focus .customers-icon,
@@ -379,6 +373,9 @@ img {
   border-color: var(--brand-txt-col);
 }
 
+.teams-icon {
+  /* fill: var(--icon-color); */
+}
 /* footer */
 
 .footer {
@@ -414,7 +411,7 @@ img {
 }
 
 .contact-div {
-  padding-right: 70px;
+  margin-right: 70px;
 }
 
 /* footer socails link */
@@ -426,18 +423,6 @@ img {
   text-transform: uppercase;
   color: var(--footer-txt-col);
   margin-bottom: 20px;
-}
-
-.footer-socials-div .socials-icon {
-  fill: var(--footer-txt-col);
-}
-
-.footer-socials-div .socials-link {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer-socials-div .socials-link:hover {
-  background-color: var(--brand-txt-col);
 }
 
 /* ПОРТФОЛІО */
@@ -504,4 +489,12 @@ img {
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+}
+.teams-link {
+  fill: var(--icon-color);
+}
+
+.teams-link:hover,
+.teams-link:focus {
+  fill: var(--footer-txt-col);
 }
